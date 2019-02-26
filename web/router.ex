@@ -16,8 +16,12 @@ defmodule Discuss.Router do
   scope "/", Discuss do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", LandingController, :index
+    get "/topics/new", TopicController, :new
   end
+
+
+
 
   # Other scopes may use custom stacks.
   # scope "/api", Discuss do
